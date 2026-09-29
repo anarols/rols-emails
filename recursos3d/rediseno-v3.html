@@ -874,7 +874,10 @@
         var ok = groups.every(function(sel){ return sel.some(function(t){ return toks.indexOf(t) >= 0; }); });
         if (ok && terms.length){ var nm = cards[k].getAttribute('data-names') || ''; ok = terms.every(function(t){ return nm.indexOf(t) >= 0; }); }
         cards[k].style.display = ok ? '' : 'none';
-        if (ok){ shown++; if (wantCats.length && cards[k].__selectByCat) cards[k].__selectByCat(wantCats); }
+        if (ok){ shown++;
+          if (wantCats.length && cards[k].__selectByCat) cards[k].__selectByCat(wantCats);
+          else if (terms.length && cards[k].__selectByName && !cards[k].__selectByName(terms)){ var SC={azul:'Azules',azules:'Azules',verde:'Verdes',verdes:'Verdes',marron:'Marrones',marrones:'Marrones',gris:'Grises',grises:'Grises',beige:'Beiges',beiges:'Beiges',negro:'Negros',negros:'Negros',blanco:'Blancos',blancos:'Blancos',naranja:'Naranjas',naranjas:'Naranjas',rojo:'Rojos',rojos:'Rojos',amarillo:'Amarillos',amarillos:'Amarillos',rosa:'Rojos',rosas:'Rojos'}; var sc=[]; terms.forEach(function(t){ if(SC[t]) sc.push(SC[t]); }); if(sc.length && cards[k].__selectByCat) cards[k].__selectByCat(sc); }
+        }
       }
       if (count) count.textContent = shown + (shown === 1 ? ' colección' : ' colecciones');
       if (applyBtn) applyBtn.textContent = 'Ver ' + shown + (shown === 1 ? ' resultado' : ' resultados');
@@ -912,7 +915,7 @@
       tg('tag',c.skp,'SKP','Descargar modelo SketchUp'); tg('tag',c.max,'MAX','Descargar modelo 3ds Max'); tg('tag',c.fbx,'FBX','Descargar modelo FBX'); if(c.revit) tg('tag on',c.revit,'Revit','Descargar modelo Revit'); if(c.tex) tg('tag tex',c.tex,'Textura','Descargar textura'); return t.join(''); }
     Object.keys(LIB).forEach(function(coll){
       var colors=LIB[coll]; if(!colors||!colors.length) return;
-      var card=document.createElement('div'); card.className='card'; card.setAttribute('data-coll',coll); card.setAttribute('data-names',(coll+' '+colors.map(function(x){return x.color;}).join(' ')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')); grid.appendChild(card);
+      var card=document.createElement('div'); card.className='card'; card.setAttribute('data-coll',coll); card.setAttribute('data-names',(coll+' '+colors.map(function(x){return x.color;}).join(' ')+' '+colors.map(function(x){return (x.cats||[]).join(' ');}).join(' ')).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')); grid.appendChild(card);
       var ci=0, expanded=false;
       function paint(){
         var c=colors[ci];
@@ -944,6 +947,7 @@
         r();
       }
       card.__selectByCat = function(want){ for(var k=0;k<colors.length;k++){ var cc=colors[k].cats||[]; for(var w=0;w<want.length;w++){ if(cc.indexOf(want[w])>=0){ if(ci!==k){ ci=k; paint(); } return true; } } } return false; };
+      card.__selectByName = function(terms){ for(var k=0;k<colors.length;k++){ var nm=(colors[k].color||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); for(var w=0;w<terms.length;w++){ if(terms[w] && nm.indexOf(terms[w])>=0){ if(ci!==k){ ci=k; paint(); } return true; } } } return false; };
       paint();
     });
     if(window.__initLib) window.__initLib();
