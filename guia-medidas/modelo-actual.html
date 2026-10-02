@@ -654,15 +654,16 @@
   .diag .obj{fill:none;stroke:#a7a196;stroke-width:1.3} .diag .dt{fill:none;stroke:#a7a196;stroke-width:1.2}
   .diag .pot{fill:#ddc8ab;stroke:#b7a07e;stroke-width:1.3} .diag .leaf{fill:#a7ae9b;stroke:#8e9681;stroke-width:.9}
   .modelbadge{ position:fixed; z-index:9000; left:16px; bottom:16px; background:#333a3c; color:#fff; font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding:9px 15px; border-radius:999px; box-shadow:0 6px 24px rgba(0,0,0,.2); }
-  .principios .pHead{ margin-bottom:34px; max-width:62ch; }
-  .principios .pHead .eyebrow{ margin:0 0 10px; }
-  .principios .pHead h2{ font-family:var(--display); font-weight:400; font-size:clamp(1.5rem,2.8vw,2.05rem); line-height:1.06; letter-spacing:-.02em; margin:0; color:var(--fg); }
+  .pintro{ display:block; }
+  .pintro .pHead{ margin-bottom:34px; max-width:62ch; }
+  .pintro .pHead .eyebrow{ margin:0 0 10px; }
+  .pintro .pHead h2{ font-family:var(--display); font-weight:400; font-size:clamp(1.5rem,2.8vw,2.05rem); line-height:1.06; letter-spacing:-.02em; margin:0; color:var(--fg); }
   .pLead{ font-size:14.5px; line-height:1.7; color:var(--muted); margin:14px 0 0; max-width:52ch; }
   .picards{ display:grid; gap:24px; grid-template-columns:1fr; }
   @media(min-width:760px){ .picards{ grid-template-columns:repeat(3,1fr); gap:28px; } }
-  .picards article{ border:1px solid var(--line); border-radius:18px; padding:30px 28px; background:#fff; }
-  .picards .pic{ display:inline-flex; width:46px; height:46px; align-items:center; justify-content:center; border-radius:12px; background:var(--surface); color:var(--fg); }
-  .picards .pic svg{ width:24px; height:24px; }
+  .picards article{ border:1px solid var(--line); border-radius:18px; padding:32px 28px; background:#fff; text-align:center; }
+  .picards .pic{ display:flex; width:50px; height:50px; align-items:center; justify-content:center; border-radius:14px; background:var(--surface); color:var(--fg); margin:0 auto; }
+  .picards .pic svg{ width:25px; height:25px; }
   .picards h3{ font-family:var(--display); font-weight:400; font-size:19px; letter-spacing:-.01em; margin:18px 0 9px; color:var(--fg); }
   .picards p{ font-size:13.5px; line-height:1.7; color:var(--muted); margin:0; }
   .cfig{ aspect-ratio:47/32; } .cfig img.diag{ width:100%; height:100%; object-fit:contain; display:block; padding:6px; }
@@ -758,7 +759,7 @@
     </ul>
   </section>
 
-  <section class="wrap sec principios"><div class="pHead"><p class="eyebrow">Antes de elegir</p><h2>En qué fijarte antes de medir</h2><p class="pLead">La medida ideal no la marca el tamaño de la sala, sino estos tres detalles.</p></div><div class="picards"><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4.5" width="18" height="15" rx="2.4"/><rect x="12" y="11.5" width="6.5" height="5.5" rx="1.2"/></svg></span><h3>Posicionamiento</h3><p>El tamaño de la habitación no determina el de la alfombra. Importa más dónde y cómo está colocado el mobiliario: una alfombra con las proporciones adecuadas unifica los distintos elementos de la sala y le da armonía y cohesión.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 9.5c3 0 3 2 6 2s3-2 6-2 3 2 6 2"/><path d="M3 14.5c3 0 3 2 6 2s3-2 6-2 3 2 6 2"/></svg></span><h3>Confort y tamaño</h3><p>Para disfrutar al caminar sobre ella, asegúrate de que sobra alfombra en los bordes de la cama o en los laterales de un pasillo. Así aprovechas al máximo su confort.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="4" y="4" width="12.5" height="12.5" rx="2"/><path d="M8.5 20H20V8.5"/></svg></span><h3>Adecuación al espacio</h3><p>No elijas solo por la apariencia. Cuenta la percepción, pero también las propiedades de cada material y si encaja en ese espacio. Si lo necesitas, te ayudamos a escoger la mejor para tu caso.</p></article></div></section>
+  <section class="wrap sec pintro"><div class="pHead"><p class="eyebrow">Antes de elegir</p><h2>En qué fijarte antes de medir</h2><p class="pLead">La medida ideal no la marca el tamaño de la sala, sino estos tres detalles.</p></div><div class="picards"><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4.5" width="18" height="15" rx="2.4"/><rect x="12" y="11.5" width="6.5" height="5.5" rx="1.2"/></svg></span><h3>Posicionamiento</h3><p>El tamaño de la habitación no determina el de la alfombra. Importa más dónde y cómo está colocado el mobiliario: una alfombra con las proporciones adecuadas unifica los distintos elementos de la sala y le da armonía y cohesión.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1.5"/><path d="M4 4l2.6 2.6M20 4l-2.6 2.6M4 20l2.6-2.6M20 20l-2.6-2.6"/></svg></span><h3>Confort y tamaño</h3><p>Para disfrutar al caminar sobre ella, asegúrate de que sobra alfombra en los bordes de la cama o en los laterales de un pasillo. Así aprovechas al máximo su confort.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.2l2.4 2.4 5-5.2"/></svg></span><h3>Adecuación al espacio</h3><p>No elijas solo por la apariencia. Cuenta la percepción, pero también las propiedades de cada material y si encaja en ese espacio. Si lo necesitas, te ayudamos a escoger la mejor para tu caso.</p></article></div></section>
 
   <section class="wrap sec" id="espacios">
     <div class="stop"><p class="eyebrow">Según el espacio</p><h2 style="max-width:22ch">Nuestras recomendaciones, estancia por estancia</h2></div>
