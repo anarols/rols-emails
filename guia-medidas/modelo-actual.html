@@ -646,12 +646,17 @@
   .diag .obj{fill:none;stroke:#a7a196;stroke-width:1.3} .diag .dt{fill:none;stroke:#a7a196;stroke-width:1.2}
   .diag .pot{fill:#ddc8ab;stroke:#b7a07e;stroke-width:1.3} .diag .leaf{fill:#a7ae9b;stroke:#8e9681;stroke-width:.9}
   .modelbadge{ position:fixed; z-index:9000; left:16px; bottom:16px; background:#333a3c; color:#fff; font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding:9px 15px; border-radius:999px; box-shadow:0 6px 24px rgba(0,0,0,.2); }
-  .principios{ padding-top:4px; }
-  .pgrid{ display:grid; gap:28px; grid-template-columns:1fr; margin-top:4px; }
-  @media(min-width:760px){ .pgrid{ grid-template-columns:repeat(3,1fr); gap:44px; } }
-  .pgrid article{ border-top:1px solid var(--line); padding-top:20px; }
+  .principiosWrap{ padding-block:10px; }
+  .principios{ background:var(--surface); border-radius:24px; padding:clamp(30px,4vw,56px); }
+  .pHead{ margin-bottom:34px; max-width:62ch; }
+  .pHead .eyebrow{ margin:0 0 10px; }
+  .pHead h2{ font-family:var(--display); font-weight:400; font-size:clamp(1.5rem,2.8vw,2.05rem); line-height:1.06; letter-spacing:-.02em; margin:0; color:var(--fg); }
+  .pLead{ font-size:14.5px; line-height:1.7; color:var(--muted); margin:14px 0 0; max-width:52ch; }
+  .pgrid{ display:grid; gap:30px; grid-template-columns:1fr; }
+  @media(min-width:760px){ .pgrid{ grid-template-columns:repeat(3,1fr); gap:40px; } }
+  .pgrid article{ border-top:1px solid var(--line); padding-top:18px; }
   .pgrid .pn{ font-family:var(--display); font-size:13px; letter-spacing:.16em; color:var(--soft); }
-  .pgrid h3{ font-family:var(--display); font-weight:400; font-size:22px; margin:9px 0 9px; color:var(--fg); letter-spacing:-.01em; }
+  .pgrid h3{ font-family:var(--display); font-weight:400; font-size:20px; margin:7px 0 9px; color:var(--fg); letter-spacing:-.01em; }
   .pgrid p{ font-size:14px; line-height:1.72; color:var(--muted); margin:0; }
   .cfig{ aspect-ratio:47/32; } .cfig img.diag{ width:100%; height:100%; object-fit:contain; display:block; padding:6px; }
 </style>
@@ -746,7 +751,7 @@
     </ul>
   </section>
 
-  <section class="wrap sec principios"><div class="stop"><p class="eyebrow">Lo esencial</p><h2 style="max-width:16ch">Tres ideas antes de elegir</h2></div><div class="pgrid"><article><span class="pn">01</span><h3>Posicionamiento</h3><p>El tamaño de la habitación no determina el de la alfombra. Importa más dónde y cómo está colocado el mobiliario: una alfombra con las proporciones adecuadas unifica los distintos elementos de la sala y le da armonía y cohesión.</p></article><article><span class="pn">02</span><h3>Confort y tamaño</h3><p>Para disfrutar al caminar sobre ella, asegúrate de que sobra alfombra en los bordes de la cama o en los laterales de un pasillo. Así aprovechas al máximo su confort.</p></article><article><span class="pn">03</span><h3>Adecuación al espacio</h3><p>No elijas solo por la apariencia. Cuenta la percepción, pero también las propiedades de cada material y si encaja en ese espacio. Si lo necesitas, te ayudamos a escoger la mejor para tu caso.</p></article></div></section>
+  <section class="wrap principiosWrap"><div class="principios"><div class="pHead"><p class="eyebrow">Antes de elegir</p><h2>En qué fijarte antes de medir</h2><p class="pLead">La medida ideal no la marca el tamaño de la sala, sino estos tres detalles.</p></div><div class="pgrid"><article><span class="pn">01</span><h3>Posicionamiento</h3><p>El tamaño de la habitación no determina el de la alfombra. Importa más dónde y cómo está colocado el mobiliario: una alfombra con las proporciones adecuadas unifica los distintos elementos de la sala y le da armonía y cohesión.</p></article><article><span class="pn">02</span><h3>Confort y tamaño</h3><p>Para disfrutar al caminar sobre ella, asegúrate de que sobra alfombra en los bordes de la cama o en los laterales de un pasillo. Así aprovechas al máximo su confort.</p></article><article><span class="pn">03</span><h3>Adecuación al espacio</h3><p>No elijas solo por la apariencia. Cuenta la percepción, pero también las propiedades de cada material y si encaja en ese espacio. Si lo necesitas, te ayudamos a escoger la mejor para tu caso.</p></article></div></div></section>
 
   <section class="wrap sec" id="espacios">
     <div class="stop"><p class="eyebrow">Según el espacio</p><h2 style="max-width:22ch">Nuestras recomendaciones, estancia por estancia</h2></div>
