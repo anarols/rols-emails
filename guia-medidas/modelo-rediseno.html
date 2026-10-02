@@ -642,11 +642,11 @@
   /* variante en columnas (A/B/C una al lado de otra) */
   .cgrid{ display:grid; gap:30px; grid-template-columns:1fr; }
   @media(min-width:800px){ .cgrid{ grid-template-columns:repeat(3,1fr); gap:34px; } .cgrid.two{ grid-template-columns:repeat(2,1fr); max-width:770px; } }
-  .ccard{ margin:0; }
+  .ccard{ margin:0; display:flex; flex-direction:column; height:100%; }
   .ccard .clabel{ margin:18px 0 10px; }
   .ccard h3{ font-family:var(--display); font-weight:400; font-size:19px; line-height:1.14; letter-spacing:-.01em; margin:0 0 9px; color:var(--fg); }
-  .ccard .ctext{ font-size:13.5px; line-height:1.68; color:var(--muted); margin:0; }
-  .ccard .ctag{ margin-top:15px; }
+  .ccard .ctext{ font-size:13.5px; line-height:1.68; color:var(--muted); margin:0 0 18px; }
+  .ccard .ctag{ margin-top:auto; align-self:flex-start; }
   .diag .rug{fill:#ebe4d8} .diag .gr{stroke:#e3dcce;stroke-width:1;opacity:.7} .diag .fl{fill:#fff}
   .diag .fr{fill:#fff;stroke:#857f76;stroke-width:1.6;stroke-linejoin:round}
   .diag .band{fill:#f3efe9;stroke:#857f76;stroke-width:1.4} .diag .back{fill:#efe9e0;stroke:#857f76;stroke-width:1.5}
