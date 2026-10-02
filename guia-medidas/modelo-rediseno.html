@@ -667,15 +667,11 @@
   .diag .pot{fill:#ddc8ab;stroke:#b7a07e;stroke-width:1.3} .diag .leaf{fill:#a7ae9b;stroke:#8e9681;stroke-width:.9}
   .modelbadge{ position:fixed; z-index:9000; left:16px; bottom:16px; background:#333a3c; color:#fff; font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding:9px 15px; border-radius:999px; box-shadow:0 6px 24px rgba(0,0,0,.2); }
   .pintro{ display:block; }
-  .pintro .stop{ max-width:62ch; }
-  .pintro .pLead{ font-size:14.5px; line-height:1.7; color:var(--muted); margin:14px 0 0; max-width:52ch; }
-  .picards{ display:grid; gap:24px; grid-template-columns:1fr; }
-  @media(min-width:760px){ .picards{ grid-template-columns:repeat(3,1fr); gap:28px; } }
-  .picards article{ border:1px solid var(--line); border-radius:18px; padding:32px 28px; background:#fff; text-align:center; }
-  .picards .pic{ display:flex; width:50px; height:50px; align-items:center; justify-content:center; border-radius:14px; background:var(--surface); color:var(--fg); margin:0 auto; }
-  .picards .pic svg{ width:25px; height:25px; }
-  .picards h3{ font-family:var(--display); font-weight:400; font-size:19px; letter-spacing:-.01em; margin:18px 0 9px; color:var(--fg); }
-  .picards p{ font-size:13.5px; line-height:1.7; color:var(--muted); margin:0; }
+  .pcols{ display:grid; gap:20px; grid-template-columns:1fr; }
+  @media(min-width:760px){ .pcols{ grid-template-columns:repeat(3,1fr); gap:24px; } }
+  .pcols article{ background:var(--surface); border-radius:18px; padding:clamp(32px,3.2vw,48px) clamp(24px,2.4vw,36px); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .pcols h3{ font-family:var(--display); font-weight:400; font-size:22px; letter-spacing:-.01em; margin:0 0 16px; color:var(--fg); }
+  .pcols p{ font-size:13.5px; line-height:1.78; color:var(--muted); margin:0; max-width:34ch; }
   .cfig{ aspect-ratio:47/30; } .cfig svg{ width:100%; height:auto; display:block; }
 </style>
 
@@ -751,7 +747,7 @@
 
   
 
-  <section class="wrap sec pintro"><div class="stop"><p class="eyebrow">Antes de elegir</p><h2>En qué fijarte antes de medir</h2></div><div class="picards"><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4.5" width="18" height="15" rx="2.4"/><rect x="12" y="11.5" width="6.5" height="5.5" rx="1.2"/></svg></span><h3>Posicionamiento</h3><p>Lo que cuenta no es el tamaño de la sala, sino cómo está colocado el mobiliario. Con las proporciones adecuadas, la alfombra unifica el espacio y le da armonía.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><rect x="3" y="8.5" width="18" height="7" rx="1.5"/><path d="M6.5 8.5v2.6M9.5 8.5v2.6M12 8.5v3.6M14.5 8.5v2.6M17.5 8.5v2.6" stroke-width="1.15" stroke-linecap="round"/></svg></span><h3>Confort y tamaño</h3><p>Deja alfombra de sobra en los bordes de la cama o en los laterales de un pasillo. Así resulta cómoda al caminar y aprovechas al máximo su confort.</p></article><article><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.3 12.2l2.4 2.4 5-5.2"/></svg></span><h3>Adecuación al espacio</h3><p>No elijas solo por la estética: importa también cómo rinde cada material y si encaja en el espacio. Si lo necesitas, te ayudamos a acertar.</p></article></div></section>
+  <section class="wrap sec pintro"><div class="pcols"><article><h3>Posición</h3><p>El primer paso es medir siempre el espacio del suelo en el que se colocará la alfombra, así como los muebles que coexistirán con ella, para asegurarte de elegir la mejor opción.</p></article><article><h3>Confort</h3><p>Nuestras alfombras son perfectas para caminar sobre ellas; para disfrutar plenamente de la experiencia y maximizar el confort, asegúrate de que haya espacio sobrante para que respire junto al resto de elementos. Por ejemplo, en los bordes de la cama.</p></article><article><h3>Diseño</h3><p>Las alfombras lisas suelen tener un estilo más tradicional y pasan más desapercibidas en el espacio. Las de diseño contemporáneo, en cambio, pueden hacer que una habitación parezca más amplia y aportar personalidad.</p></article></div></section>
 
   <section class="wrap sec" id="espacios">
     <div class="stop"><p class="eyebrow">Según el espacio</p><h2 style="max-width:22ch">Nuestras recomendaciones, estancia por estancia</h2></div>
