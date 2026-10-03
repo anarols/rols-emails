@@ -668,13 +668,13 @@
   .modelbadge{ position:fixed; z-index:9000; left:16px; bottom:16px; background:#333a3c; color:#fff; font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; padding:9px 15px; border-radius:999px; box-shadow:0 6px 24px rgba(0,0,0,.2); }
   .pintro{ display:block; background:#fff; padding-block:clamp(40px,5vw,72px); }
   .pintro .stop{ text-align:center; margin-bottom:clamp(28px,3.4vw,46px); }
-  .pintro .stop h2{ max-width:none; margin-left:auto; margin-right:auto; }
+  .pintro .stop h2{ max-width:none; margin-left:auto; margin-right:auto; font-size:clamp(1.9rem,2.8vw,2.2rem); line-height:1.08; }
   .pcols{ display:grid; gap:20px; grid-template-columns:1fr; }
   @media(min-width:760px){ .pcols{ grid-template-columns:repeat(3,1fr); gap:24px; } }
   .pcols article{ background:var(--surface); border-radius:18px; padding:clamp(28px,3vw,42px) clamp(22px,2.4vw,34px); text-align:center; }
   .pcols h3{ font-family:var(--display); font-weight:400; font-size:21px; letter-spacing:-.01em; margin:0 0 12px; color:var(--fg); }
   .pcols p{ font-size:14px; line-height:1.72; color:var(--muted); margin:0; }
-  @media(max-width:560px){ .pcols article{ text-align:left; padding:26px 22px; } }
+  @media(max-width:560px){ .pcols article{ padding:26px 22px; } }
   .sr-morehead{ display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin:0 0 18px; }
   .sr-morehead h4{ margin:0; }
   .sr-morehead .arrow, .sr-morehead .arrow:hover{ border-bottom-color:transparent; }
