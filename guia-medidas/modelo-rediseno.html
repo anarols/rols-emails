@@ -684,17 +684,14 @@
   /* el slider de exterior tiene mas tarjetas: bajar su velocidad al rango de los demas */
   .panel[data-panel="exterior"] .sr-mtrack{ animation-duration:85s; }
   .panel[data-panel="pasillo"] .sr-mtrack{ animation-duration:52s; }
-  /* ---------- CTA doble (consulta + muestras) ---------- */
-  .ctapair{ display:grid; gap:16px; }
-  @media(min-width:768px){ .ctapair{ grid-template-columns:1fr 1fr; gap:24px; } }
-  .ctabox{ background:var(--surface); border:1px solid var(--line); border-radius:18px;
-    padding:30px 28px; display:flex; flex-direction:column; align-items:flex-start; gap:12px; }
-  @media(min-width:768px){ .ctabox{ padding:38px 36px; } }
-  .ctabox-h{ font-family:var(--display); font-weight:300;
-    font-size:clamp(1.2rem,2vw,1.55rem); line-height:1.07; letter-spacing:-.02em;
-    color:var(--fg); max-width:22ch; }
-  .ctabox-p{ font-size:13px; line-height:1.72; color:var(--muted); margin:0; max-width:42ch; }
-  .ctabox .arrow{ margin-top:4px; }
+  /* ---------- CTA de cierre (titular + dos acciones) ---------- */
+  .ctaclose{ text-align:center; padding-block:28px; }
+  @media(min-width:768px){ .ctaclose{ padding-block:36px; } }
+  .ctaclose .eyebrow{ margin:0 0 14px; }
+  .ctaclose h2{ font-size:clamp(1.7rem,3.4vw,2.5rem); line-height:1.02; letter-spacing:-.025em;
+    max-width:18ch; margin:0 auto 10px; }
+  .ctaclose .ctalead{ font-size:13.5px; line-height:1.7; color:var(--muted); max-width:46ch; margin:0 auto 30px; }
+  .ctaclose .ctaacts{ display:flex; flex-wrap:wrap; gap:14px 40px; justify-content:center; }
   .cfig{ aspect-ratio:47/30; } .cfig svg{ width:100%; height:auto; display:block; }
 </style>
 
@@ -865,18 +862,13 @@
   
 
   <section class="invita">
-    <div class="wrap sec">
-      <div class="ctapair">
-        <div class="ctabox">
-          <h3 class="ctabox-h">¿Necesitas ayuda con las medidas?</h3>
-          <p class="ctabox-p">Cuéntanos dónde irá tu alfombra y te ayudamos a elegir el tamaño.</p>
-          <a class="arrow" href="mailto:info@rolscarpets.com">Consultar mi medida <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="13 5 20 12 13 19"></polyline></svg></a>
-        </div>
-        <div class="ctabox">
-          <h3 class="ctabox-h">Descubre el color y la textura en casa</h3>
-          <p class="ctabox-p">Pide muestras y mira cómo quedan con la luz de tu espacio.</p>
-          <a class="arrow" href="https://www.rolscarpets.com/muestras-de-alfombras-en-tu-hogar/">Elegir mis muestras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="13 5 20 12 13 19"></polyline></svg></a>
-        </div>
+    <div class="wrap sec ctaclose">
+      <p class="eyebrow">El último paso</p>
+      <h2>Elige con calma, te acompañamos</h2>
+      <p class="ctalead">Resolvemos tu medida y te enviamos muestras para que decidas sin dudas, desde casa.</p>
+      <div class="ctaacts">
+        <a class="arrow" href="mailto:info@rolscarpets.com">Consultar mi medida <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="13 5 20 12 13 19"></polyline></svg></a>
+        <a class="arrow" href="https://www.rolscarpets.com/muestras-de-alfombras-en-tu-hogar/">Elegir mis muestras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="13 5 20 12 13 19"></polyline></svg></a>
       </div>
     </div>
   </section>
