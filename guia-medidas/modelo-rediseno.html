@@ -653,7 +653,7 @@
   .ctag{ display:inline-block; margin-top:18px; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.02em; color:var(--fg); background:var(--beige); border-radius:999px; padding:8px 15px; }
   /* variante en columnas (A/B/C una al lado de otra) */
   .cgrid{ display:grid; gap:30px; grid-template-columns:1fr; }
-  @media(min-width:800px){ .cgrid{ grid-template-columns:repeat(3,1fr); gap:34px; } .cgrid.two{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:800px){ .cgrid{ grid-template-columns:repeat(3,1fr); gap:34px; } .cgrid.two{ grid-template-columns:repeat(2, minmax(0, calc((100% - 68px) / 3))); justify-content:center; } }
   .ccard{ margin:0; display:flex; flex-direction:column; height:100%; }
   .ccard .clabel{ display:block; font-family:var(--display); font-size:14px; font-weight:400; letter-spacing:0; text-transform:none; color:var(--soft); margin:18px 0 9px; }
   .ccard .clabel b{ font-weight:400; color:var(--fg); }
@@ -684,6 +684,8 @@
   /* el slider de exterior tiene mas tarjetas: bajar su velocidad al rango de los demas */
   .panel[data-panel="exterior"] .sr-mtrack{ animation-duration:85s; }
   .panel[data-panel="pasillo"] .sr-mtrack{ animation-duration:52s; }
+  /* dibujito del pasillo al mismo tamano que una tarjeta de 3 columnas */
+  @media(min-width:800px){ .panel[data-panel="pasillo"] .crow{ grid-template-columns:minmax(0, calc((100% - 68px) / 3)) minmax(0,1fr); } }
   /* ---------- CTA de cierre (titular + dos acciones) ---------- */
   .ctaclose{ text-align:center; padding-block:44px 72px; }
   @media(min-width:768px){ .ctaclose{ padding-block:56px 92px; } }
