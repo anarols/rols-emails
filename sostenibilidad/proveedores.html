@@ -519,25 +519,18 @@
   .rn span{ font-size:12px; line-height:1.5; color:var(--muted); }
   @media (max-width:480px){ .rc{ grid-template-columns:72px minmax(0,1fr); gap:0 14px; } .rc img{ width:72px; height:72px; } }
 
-  /* ---------- embalaje (medidas sobre la foto) ---------- */
-  .emb{ margin:30px 0 0; position:relative; border-radius:16px; overflow:hidden; background:var(--surface-deep); }
+  /* ---------- embalaje (foto + panel de superficie) ---------- */
+  .emb{ margin:30px 0 0; border-radius:16px; overflow:hidden; background:var(--surface-deep); }
   .emb img{ display:block; width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 55%; }
   @media (min-width:900px){ .emb img{ aspect-ratio:1203/460; } }
-  .emb::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(24,23,21,.82) 0%, rgba(24,23,21,.4) 48%, rgba(24,23,21,0) 72%); pointer-events:none; }
-  .emb figcaption{ position:absolute; left:0; right:0; bottom:0; padding:24px 20px; color:#fff; z-index:1; display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
-  @media (min-width:900px){ .emb figcaption{ padding:28px 32px; grid-template-columns:repeat(3,minmax(0,1fr)) auto; gap:24px 36px; align-items:end; } }
-  .emb figcaption svg{ width:20px; height:20px; margin-bottom:8px; }
-  .emb figcaption h3{ color:#fff; font-size:15.5px; }
-  .emb figcaption p{ margin-top:5px; font-size:11.5px; line-height:1.5; color:rgba(255,255,255,.85); max-width:30ch; }
-  .emb figcaption .n b{ font-family:var(--display); font-weight:300; font-size:2.6rem; line-height:1; letter-spacing:-.02em; display:block; }
-  .emb figcaption .n i{ font-style:normal; font-size:11.5px; color:rgba(255,255,255,.85); display:block; max-width:16ch; line-height:1.4; margin-top:6px; }
-  @media (max-width:899px){
-    .emb{ background:#1b1a18; }
-    .emb img{ aspect-ratio:4/3; }
-    .emb::after{ display:none; }
-    .emb figcaption{ position:static; padding:22px 20px 26px; }
-    .emb figcaption p{ max-width:none; }
-  }
+  .emb figcaption{ background:var(--surface-deep); color:var(--fg); padding:24px 20px 28px; display:grid; grid-template-columns:minmax(0,1fr); gap:20px; }
+  @media (min-width:900px){ .emb figcaption{ padding:32px; grid-template-columns:repeat(3,minmax(0,1fr)) auto; gap:28px 36px; align-items:end; } }
+  .emb figcaption svg{ width:20px; height:20px; margin-bottom:8px; color:var(--fg); }
+  .emb figcaption h3{ color:var(--fg); font-size:15.5px; }
+  .emb figcaption p{ margin-top:5px; font-size:11.5px; line-height:1.55; color:var(--muted); max-width:30ch; }
+  @media (max-width:899px){ .emb figcaption p{ max-width:none; } }
+  .emb figcaption .n b{ font-family:var(--display); font-weight:300; font-size:2.6rem; line-height:1; letter-spacing:-.02em; display:block; color:var(--fg); }
+  .emb figcaption .n i{ font-style:normal; font-size:11.5px; color:var(--muted); display:block; max-width:16ch; line-height:1.4; margin-top:6px; }
 
   /* ---------- indicadores compactos ---------- */
   .kpis.compact .inner{ padding-block:40px 44px; }
