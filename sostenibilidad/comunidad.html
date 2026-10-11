@@ -393,21 +393,14 @@
 
   /* ---------- mosaico escalonado (cierre) ---------- */
   .mosaico-sec{ padding-bottom:40px; }
-  .mosaico{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px 18px; margin-top:38px; padding-bottom:40px; }
-  @media (min-width:760px){ .mosaico{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:48px 28px; padding-bottom:72px; } }
+  .mosaico{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 18px; margin-top:38px; padding-bottom:8px; }
+  @media (min-width:760px){ .mosaico{ grid-template-columns:repeat(3,minmax(0,1fr)); gap:36px 28px; padding-bottom:8px; } }
   .mosaico figure, .mosaico a.mfig{ margin:0; display:block; text-decoration:none; color:inherit; }
   .mosaico a.mfig img{ transition:opacity .35s ease; } .mosaico a.mfig:hover img{ opacity:.88; }
   .mosaico img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px; background:var(--surface-deep); }
   .mosaico figcaption{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 12px; margin-top:12px; }
   .mosaico figcaption span{ font-family:var(--display); font-size:15px; letter-spacing:.01em; }
   .mosaico figcaption small{ font-size:9.5px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--soft); }
-  .mosaico > *:nth-child(2n){ transform:translateY(40px); }
-  @media (min-width:760px){
-    .mosaico > *:nth-child(2n){ transform:none; }
-    .mosaico > *:nth-child(3n+2){ transform:translateY(72px); }
-    .mosaico > *:nth-child(3n+1) img{ aspect-ratio:4/4.6; }
-    .mosaico > *:nth-child(3n) img{ aspect-ratio:4/5.4; }
-  }
 
   /* ---------- B Corp ---------- */
   .bcorp-band{ background:var(--surface-warm); margin-top:0; }
