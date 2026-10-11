@@ -618,9 +618,15 @@
   .compV-cap li{ display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.5; color:#fff; }
   .compV-cap li svg{ width:16px; height:16px; flex:none; margin-top:2px; }
   @media (max-width:699px){
+    .compV{ background:#fff; }
     .compV > img{ height:260px; }
     .compV-scrim{ display:none; }
-    .compV-cap{ position:static; padding-top:24px; padding-bottom:32px; }
+    .compV-cap{ position:static; padding-top:24px; padding-bottom:32px; color:var(--fg); }
+    .compV-cap .eyebrow{ color:var(--soft); }
+    .compV-cap h2{ color:var(--fg); text-shadow:none; }
+    .compV-cap .i{ color:var(--muted); }
+    .compV-cap ul{ border-top-color:var(--line); }
+    .compV-cap li{ color:var(--fg); }
   }
 
   /* ---------- código de conducta (foto + tarjeta de requisitos) ---------- */
