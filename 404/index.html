@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Página no encontrada · Rols</title>
+<meta name="description" content="La página que buscas no está disponible. Vuelve al inicio de Rols Carpets o elige por dónde seguir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#f7f3f0;
+    --surface-deep:#efe9e4;
+    --surface-warm:#ebe4e4;
+    --beige:#ede2d6;
+    --fg:#333a3c;
+    --muted:rgba(51,58,60,.70);
+    --soft:rgba(51,58,60,.55);
+    --line:rgba(51,58,60,.14);
+    --line-strong:rgba(51,58,60,.35);
+    --cabecera:62px;
+    --display:"League Spartan","League Spartan Fallback",Helvetica,Arial,sans-serif;
+    --sans:"Montserrat","Montserrat Fallback",Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  @media (min-width:1024px){ :root{ --cabecera:84px; } }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (max-width:640px){ html,body{ overflow-x:hidden; } }
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:var(--sans); font-size:14px; font-weight:300; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex; flex-direction:column; min-height:100svh;
+  }
+  img{ max-width:100%; height:auto; display:block; }
+  a{ color:inherit; }
+  :focus-visible{ outline:2px solid var(--fg); outline-offset:3px; }
+  @media (prefers-reduced-motion:reduce){ *{ transition:none!important; animation:none!important; } html{scroll-behavior:auto;} }
+
+  /* ---------- layout ---------- */
+  .wrap{ padding-inline:20px; }
+  @media (min-width:768px){ .wrap{ padding-inline:40px; } }
+  @media (min-width:1024px){ .wrap{ padding-inline:64px; } }
+
+  /* ---------- type ---------- */
+  .eyebrow{
+    font-size:10.5px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--soft); margin:0;
+  }
+  h1,h2,h3{ font-family:var(--display); font-weight:300; margin:0; text-wrap:balance; }
+  h1{ font-size:clamp(2.05rem,4.5vw,3.35rem); line-height:1.04; letter-spacing:-.022em; }
+  p{ margin:0; }
+  .lead{ font-size:15px; line-height:1.8; color:var(--muted); max-width:46ch; }
+
+  .arrow{
+    display:inline-flex; align-items:center; gap:12px; width:fit-content;
+    border-bottom:1px solid var(--line-strong); padding-bottom:8px;
+    font-size:10.5px; font-weight:500; letter-spacing:.16em; text-transform:uppercase;
+    text-decoration:none; transition:gap .3s ease, border-color .3s ease;
+  }
+  .arrow:hover{ gap:20px; border-color:var(--fg); }
+  .arrow svg{ width:14px; height:14px; flex:none; }
+  .arrow.quiet{ border-bottom-color:transparent; color:var(--soft); }
+  .arrow.quiet:hover{ color:var(--fg); border-bottom-color:var(--line-strong); }
+
+  .pill{
+    display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+    border-radius:999px; background:var(--beige); padding:10px 20px;
+    font-size:11px; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+    text-decoration:none; transition:background-color .3s ease; color:var(--fg);
+  }
+  .pill:hover{ background:#e3d5c5; }
+  .pill svg{ width:12px; height:12px; }
+
+  /* ---------- header ---------- */
+  header.site{
+    position:fixed; inset-inline:0; top:0; z-index:50;
+    height:calc(var(--cabecera) + env(safe-area-inset-top,0px));
+    padding-top:env(safe-area-inset-top,0px);
+    background:var(--bg); border-bottom:1px solid transparent;
+  }
+  header.site .bar{ position:relative; height:var(--cabecera); }
+  .burger{
+    position:absolute; top:50%; left:20px; transform:translateY(-50%);
+    background:none; border:0; padding:0; cursor:pointer; color:inherit; z-index:2;
+  }
+  .burger span{ display:block; width:26px; height:1px; background:currentColor; transition:transform .3s ease; }
+  .burger span+span{ margin-top:8px; }
+  .burger[aria-expanded="true"] span:first-child{ transform:translateY(4.5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span+span{ transform:translateY(-4.5px) rotate(-45deg); }
+  .logo{ position:absolute; top:50%; left:62px; transform:translateY(-74%); z-index:2; }
+  .logo svg{ width:64px; height:auto; display:block; }
+  .tools{
+    position:absolute; top:50%; right:20px; transform:translateY(-50%);
+    display:flex; align-items:center; gap:20px; list-style:none; margin:0; padding:0; z-index:2;
+  }
+  .tools a,.tools button{ color:inherit; background:none; border:0; padding:0; cursor:pointer; display:block; }
+  .tools svg{ width:17px; height:17px; display:block; }
+  .tools .pill, .dfoot .pill{ display:inline-flex; }
+  .tools .lang{ display:inline-flex; align-items:center; gap:5px; font-size:10.5px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--fg); }
+  .tools .lang svg{ width:11px; height:11px; }
+  .hideS{ display:none; }
+  @media (min-width:1024px){
+    .burger{ left:30px; } .logo{ left:82px; } .logo svg{ width:92px; }
+    .tools{ right:30px; } .hideS{ display:block; }
+  }
+  .skip{ position:absolute; left:-9999px; }
+  .skip:focus{ left:16px; top:12px; z-index:80; background:#fff; padding:8px 12px; }
+
+  .scrim{
+    position:fixed; inset:var(--cabecera) 0 0; z-index:40; background:rgba(51,58,60,.15);
+    opacity:0; visibility:hidden; transition:opacity .3s ease,visibility .3s ease; border:0; cursor:default;
+  }
+  .scrim.open{ opacity:1; visibility:visible; }
+  .drawer{
+    position:fixed; top:var(--cabecera); bottom:0; left:0; z-index:45;
+    width:min(25rem,88vw); background:var(--bg); border-right:1px solid var(--line);
+    transform:translateX(-100%); visibility:hidden; transition:transform .3s ease,visibility .3s ease;
+    display:flex; flex-direction:column; padding:22px 22px 26px;
+  }
+  .drawer.open{ transform:none; visibility:visible; }
+  @media (min-width:1024px){ .drawer{ padding-inline:30px; } }
+  .dscroll{ flex:1 1 auto; overflow-y:auto; }
+  .dnav{ list-style:none; margin:0; padding:0; }
+  .dnav li a{
+    display:flex; align-items:center; gap:10px; padding:14px 0; font-size:15px; font-weight:500;
+    letter-spacing:.01em; color:var(--fg); text-decoration:none; transition:opacity .25s ease;
+  }
+  .dnav li a:hover{ opacity:.6; }
+  .dnav.dsec{ margin-top:14px; padding-top:6px; border-top:1px solid var(--line); }
+  .dnav.dsec li a{ font-size:13px; }
+  .dchev{ margin-left:auto; width:14px; height:14px; color:var(--soft); flex:none; }
+  .dlead{ width:16px; height:16px; flex:none; }
+  .dfoot{ display:flex; flex-direction:column; align-items:flex-start; gap:18px; margin-top:18px; padding-top:20px; border-top:1px solid var(--line); }
+
+  main{ padding-top:var(--cabecera); flex:1 1 auto; display:flex; }
+
+  /* ---------- 404 hero ---------- */
+  .e404{
+    display:grid; grid-template-columns:minmax(0,1fr); gap:36px;
+    padding-block:44px 48px; align-content:center; width:100%;
+  }
+  @media (min-width:900px){
+    .e404{ grid-template-columns:minmax(0,1fr) minmax(0,1.12fr); gap:56px; align-items:center; padding-block:40px; }
+  }
+  .e404 .copy{ display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
+  .e404 .num{
+    font-family:var(--display); font-weight:300; color:var(--fg);
+    font-size:clamp(4.6rem,15vw,8.5rem); line-height:.86; letter-spacing:-.04em; margin:0;
+  }
+  .e404 .headblock{ display:flex; flex-direction:column; gap:14px; }
+  .e404 h1{ max-width:16ch; }
+  .e404 .lead{ max-width:44ch; }
+  .e404 .main-cta{ margin-top:2px; }
+
+  .subcta{ display:flex; flex-wrap:wrap; align-items:center; gap:14px 28px; margin-top:6px; }
+
+  .e404 .art{ position:relative; order:-1; }
+  @media (min-width:900px){ .e404 .art{ order:0; } }
+  .e404 .art img{
+    width:100%; border-radius:16px; background:var(--surface-deep);
+    aspect-ratio:4/3.1; object-fit:cover; object-position:center 60%;
+  }
+  @media (min-width:900px){
+    .e404 .art img{ aspect-ratio:4/4.3; max-height:calc(100svh - var(--cabecera) - 120px); }
+  }
+
+  /* ---------- footer ---------- */
+  footer.site{ background:var(--bg); border-top:1px solid var(--line); }
+  .fcols{ display:grid; gap:36px; padding-block:56px 40px; }
+  @media (min-width:700px){ .fcols{ grid-template-columns:1.2fr repeat(3,1fr); gap:32px; } }
+  .fcols h4{ font-family:var(--sans); font-size:10.5px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; margin:0 0 16px; }
+  .fcols ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .fcols a{ font-size:13px; color:var(--muted); text-decoration:none; transition:color .3s ease; }
+  .fcols a:hover{ color:var(--fg); }
+  .fbrand svg{ display:block; width:88px; height:auto; margin-bottom:20px; }
+  .fcols .fcontact{ display:flex; width:fit-content; align-items:center; gap:12px; font-family:var(--display); font-weight:300; font-size:19px; line-height:1.15; letter-spacing:-.01em; text-decoration:none; color:var(--fg); transition:color .3s ease; }
+  .fcontact:hover{ color:var(--soft); }
+  .fcontact svg{ width:14px; height:14px; margin:0; transition:transform .3s ease; }
+  .fcontact:hover svg{ transform:translateX(4px); }
+  .fcontact-list{ list-style:none; margin:16px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; }
+  .fcontact-list a{ font-size:13px; color:var(--muted); text-decoration:none; transition:color .3s ease; }
+  .fcontact-list a:hover{ color:var(--fg); }
+  .fcols .fsocial{ list-style:none; margin:24px 0 0; padding:0; display:flex; flex-direction:row; align-items:center; justify-content:flex-start; gap:20px; }
+  .fcols .fsocial a{ display:block; color:var(--fg); transition:opacity .3s ease; }
+  .fcols .fsocial a:hover{ opacity:.55; }
+  .fcols .fsocial svg{ width:22px; height:22px; margin:0; }
+  .flegal{ border-top:1px solid var(--line); padding-block:22px 40px; display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; font-size:11.5px; color:var(--soft); }
+  .flegal ul{ list-style:none; display:flex; flex-wrap:wrap; gap:10px 20px; margin:0; padding:0; }
+  .flegal a{ color:inherit; text-decoration:none; }
+  .flegal a:hover{ color:var(--fg); }
+.e404{padding-block:48px 56px;gap:48px}.e404 .copy{gap:24px}.e404 .num{color:var(--fg)}.e404 h1{font-family:var(--display);font-size:clamp(2rem,4vw,3.25rem);font-weight:300;line-height:1.03;letter-spacing:-.02em;max-width:15ch}.e404 .headblock{gap:18px}.e404 .lead{max-width:39ch;font-family:var(--sans);font-size:13.5px;font-weight:300;line-height:1.8;color:rgba(51,58,60,.70)}.e404 .art{order:0;min-width:0}
+.e404 .gallery-stage{position:relative;width:100%;overflow:hidden;border-radius:16px;background:var(--surface-deep);aspect-ratio:4/4.3}
+.e404 .slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.2s ease;pointer-events:none}.e404 .slide.is-active{opacity:1}.e404 .slide img{width:100%;height:100%;max-height:none;aspect-ratio:auto;border-radius:0;object-fit:cover;object-position:center}
+.e404 .gallery-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px}
+.e404 .gallery-caption{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.e404 .gallery-actions{display:flex;align-items:center;gap:4px}
+.e404 .gallery-controls .gallery-dot{display:grid;place-items:center;flex:none;width:20px;height:36px;padding:0;border:0;background:transparent;cursor:pointer;transition:width .5s ease}
+.e404 .gallery-dot::after{content:'';display:block;width:8px;height:8px;border-radius:999px;background:#ede2d6;transition:width .5s ease,background-color .5s ease}
+.e404 .gallery-controls .gallery-dot[aria-current="true"]{width:40px}
+.e404 .gallery-dot[aria-current="true"]::after{width:36px;background:#b9906a}
+.e404 .gallery-dot:hover::after{background:#b9906a}
+.e404 .gallery-controls[hidden]{display:none}
+@media(min-width:900px){.e404{gap:64px;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr)}.e404 .gallery-stage{aspect-ratio:5/4;max-height:660px}}
+@media(max-width:899px){.e404{padding-top:36px;gap:36px}.e404 .gallery-stage{aspect-ratio:4/3.6}.e404 h1{max-width:16ch}}
+@media(prefers-reduced-motion:reduce){.e404 .slide{transition:none}}
+.e404 .slide[data-caption="Manuela Cream"] img{object-position:center 85%;}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site">
+  <div class="bar">
+    <button class="burger" type="button" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+
+    <a class="logo" href="https://www.rolscarpets.com/" aria-label="Alfombras y moquetas Rols">
+      <svg viewBox="0 29.8 128.06 68.5" aria-hidden="true"><path fill="currentColor" d="M80.9 97.7V29.8h3.3v65.1h17.1v2.8H80.9m-15-13.6c.5-2.3.5-4.7 0-7-.2-.7-.4-1.4-.6-2-.8-1.9-2-3.5-3.4-4.9-1.3-1.3-2.9-2.3-4.6-3-.5-.2-1.1-.4-1.7-.6-.8-.2-1.5-.4-2.3-.4-.5-.1-1.1 0-1.6-.1H51c-1.3 0-2.6.2-3.9.5-4.5 1.2-8.5 4.6-10 9.1 0 .1-.1.3-.1.4-.2.8-.4 1.6-.6 2.5 0 .6-.2 1.2-.1 1.8 0 .8.1 1.6.2 2.3.1.7.2 1.4.4 2 0 .1.1.2.1.3 1.4 4.4 5.2 7.9 9.6 9.3.7.2 1.3.4 2 .5.7.1 1.3.1 2 .2.6.1 1.2.1 1.8 0 .4-.1.8 0 1.1-.1.9-.1 1.8-.3 2.7-.6 4.6-1.3 8.6-5.3 9.7-10.2m3.6-7.4c.5 2.5.5 5.2 0 7.7-.2.8-.4 1.5-.7 2.2-1.2 3.2-3.5 5.9-6.2 7.9-1.7 1.3-3.7 2.3-5.8 2.9-.6.2-1.3.3-1.9.4-.5.1-1.1.1-1.6.2-.7 0-1.4 0-2.1.1-.7-.1-1.4-.1-2.1-.1-.3-.1-.7 0-1-.1-1-.1-2-.4-3-.7-4-1.2-7.4-3.9-9.7-7.3-.9-1.4-1.6-2.9-2.1-4.5 0-.1-.1-.2-.1-.3-.2-.7-.4-1.5-.4-2.2-.1-.4-.1-.7-.1-1.1-.1-.2-.1-.4-.1-.7 0-1.8.1-3.6.6-5.3v-.2c.1-.5.3-.9.5-1.4 1-2.6 2.8-4.9 4.9-6.8 2.2-1.9 4.9-3.3 7.8-4 1.1-.3 2.2-.4 3.3-.5h2.9c.1 0 .3 0 .4.1 1.1 0 2.2.3 3.2.5.6.2 1.1.3 1.6.5 2.1.7 4 1.9 5.7 3.3 2.2 1.9 4.1 4.3 5.1 7l.6 1.8c.2.3.3.5.3.6m45-13.1c-2.6.9-4.8 2.9-5.9 5.4-.2.5-.3.9-.4 1.4 0 .2-.1.4-.1.7-.2 1.5-.1 3.1.5 4.6.9 2 2.6 3.5 4.6 4.3.4.2.9.4 1.3.6.6.2 1.1.4 1.7.7 2.2.9 4.6 1.7 6.5 3.3.8.8 1.4 1.8 1.7 2.9.2.9.2 1.8 0 2.7-.2.5-.3 1.1-.6 1.6-.9 1.6-2.5 2.7-4.3 3.2-.8.2-1.6.3-2.4.2-.3-.1-.6-.1-.9-.1-.6-.1-1.3-.3-1.9-.5-2-.8-3.9-2-5.7-3.2v3.9c1 .6 2 1.2 3 1.7.5.2 1 .4 1.6.6.1 0 .3.1.4.1l1.2.3c.2 0 .4.1.5.1.3.1.5.1.8.1.5 0 1 0 1.6.1.7-.1 1.4-.1 2.1-.2.7-.1 1.4-.3 2-.6 2.5-1 4.6-2.9 5.6-5.4.7-1.7.8-3.6.5-5.4-.1-.6-.3-1.1-.5-1.7-.4-1.1-1.1-2.1-2-2.9-1.5-1.4-3.4-2.1-5.2-2.8-.5-.2-1-.4-1.4-.6-1.7-.6-3.5-1.2-5-2.3-1-.7-1.8-1.8-2.1-3 0-.2 0-.3-.1-.5v-1.7c.2-.9.5-1.9 1.1-2.6.7-.9 1.7-1.6 2.8-2.1 1-.4 2-.5 3.1-.5.4.1.7 0 1.1.1 1.2.2 2.4.6 3.5 1.1 1.1.5 2.2 1.1 3.3 1.7v-3.7c-1.4-.7-2.8-1.3-4.3-1.7-.7-.2-1.4-.3-2.1-.4-.9-.2-1.9-.1-2.8-.1-.9.1-1.9.3-2.8.6M17.2 74.4c.5-1.8.3-3.9-.8-5.4-.9-1.2-2.4-1.9-3.8-2.3h-.2c-.8-.2-1.5-.3-2.3-.3H3.6v12.5H10c.4-.1.8 0 1.2-.1 1.3-.1 2.5-.5 3.6-1.1 1-.9 2-2 2.4-3.3m3.6-.1c0 .1-.1.3-.1.4 0 .1-.1.3-.1.4-.6 1.9-2 3.5-3.7 4.5-.6.4-1.3.7-2 1 1.5 1.2 2.7 2.9 3.8 4.5l8.4 12.6h-4c-1.1-1.8-2.4-3.6-3.5-5.4-1.9-2.8-3.5-5.7-5.7-8.2-.5-.5-1-1.1-1.7-1.5-.8-.5-1.8-.7-2.7-.9-.2 0-.5 0-.7-.1-1.8-.1-3.6 0-5.4 0v16.1H0V63.4h9.5c1 .1 1.9.1 2.9.3.7.1 1.4.3 2 .4 1.9.6 3.8 1.6 5 3.3.5.7.9 1.5 1.2 2.3.4 1.4.5 3.1.2 4.6"></path></svg>
+    </a>
+
+    <ul class="tools">
+      <li class="hideS"><a class="pill" href="https://pro.rolscarpets.com/?ulang=1" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"></rect><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path></svg>Rols Pro</a></li>
+      <li><a href="https://www.rolscarpets.com/donde-encontrarnos/" aria-label="Dónde comprar" title="Dónde comprar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11.1a7 7 0 1 0-14 0c0 5 7 11.1 7 11.1Z"></path><circle cx="12" cy="10.2" r="2.6"></circle></svg></a></li>
+      <li><a href="https://www.rolscarpets.com/" aria-label="Buscar" title="Buscar"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M63.7 61.5 47.6 45.4c4.4-4.8 7.1-11.2 7.1-18.2C54.7 12.2 42.5 0 27.5 0S.3 12.2.3 27.2s12.2 27.2 27.2 27.2c6.7 0 12.8-2.5 17.6-6.5L61.2 64l2.5-2.5zM3.8 27.2c0-13 10.6-23.7 23.7-23.7 13 0 23.7 10.6 23.7 23.7 0 13-10.6 23.7-23.7 23.7-13 0-23.7-10.7-23.7-23.7z"></path></svg></a></li>
+      <li><a href="https://www.rolscarpets.com/carrito/" aria-label="Carrito" title="Carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg></a></li>
+      <li class="hideS"><button class="lang" type="button" aria-label="Idioma">ES<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button></li>
+    </ul>
+  </div>
+</header>
+
+<button class="scrim" id="scrim" aria-label="Cerrar menú" aria-hidden="true"></button>
+
+<nav class="drawer" id="drawer" aria-label="Navegación principal">
+  <div class="dscroll">
+    <ul class="dnav">
+      <li><a href="https://www.rolscarpets.com/productos/alfombras-a-medida/"><span>Alfombras a medida</span><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="https://www.rolscarpets.com/moquetas/"><span>Moquetas</span></a></li>
+      <li><a href="https://www.rolscarpets.com/colecciones/"><span>Colecciones</span></a></li>
+      <li><a href="https://www.rolscarpets.com/proyectos-realizados/"><span>Proyectos</span></a></li>
+      <li><a href="https://www.rolscarpets.com/interioristas/"><span>Profesionales</span></a></li>
+    </ul>
+    <ul class="dnav dsec">
+      <li><a href="https://www.rolscarpets.com/donde-encontrarnos/"><svg class="dlead" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s7-6.1 7-11.1a7 7 0 1 0-14 0c0 5 7 11.1 7 11.1Z"></path><circle cx="12" cy="10.2" r="2.6"></circle></svg><span>Dónde comprar</span></a></li>
+      <li><a href="https://www.rolscarpets.com/nuestra-casa/"><span>Nuestra casa</span><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="https://www.rolscarpets.com/recursos3d/"><span>Recursos</span><svg class="dchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+    </ul>
+  </div>
+  <div class="dfoot">
+    <a class="pill" href="https://pro.rolscarpets.com/?ulang=1" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"></rect><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path></svg>Rols Pro</a>
+    <a class="arrow" href="https://www.rolscarpets.com/contacto/">Contacta con nosotros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+  </div>
+</nav>
+
+<main id="contenido">
+<section class="wrap e404" aria-labelledby="error-title">
+  <div class="copy">
+    <p class="num" aria-hidden="true">404</p>
+    <div class="headblock"><p class="eyebrow">404 · Página no encontrada</p><h1 id="error-title">Un encuentro inesperado también puede inspirar.</h1></div>
+    <p class="lead">La página que buscas no está disponible. Ya que estás aquí, te invitamos a descubrir nuestras alfombras de diseño a medida y los proyectos que nuestros clientes han creado con ellas.</p>
+    <div class="subcta">
+      <a class="arrow" href="https://www.rolscarpets.com/productos/alfombras-a-medida/">Descubrir alfombras <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+      <a class="arrow quiet" href="https://www.rolscarpets.com/proyectos-realizados/">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+    </div>
+  </div>
+  <div class="art" id="error-gallery" role="region" aria-roledescription="carrusel" aria-label="Inspiración con alfombras Rols">
+    <div class="gallery-stage">
+      <figure class="slide is-active" data-caption="Strata" aria-hidden="false"><img src="https://www.rolscarpets.com/wp-content/uploads/2023/09/Strata_Coleccion.webp" alt="Alfombra Strata de Rols en un patio mediterráneo" decoding="async" fetchpriority="high" width="1536" height="1010"></figure>
+      <figure class="slide" data-caption="Kilt 04" aria-hidden="true"><img src="https://alinarols.github.io/rols-home-2026/img/rep-ed9ea930cfd7.webp" alt="Alfombra Kilt verde bajo dos sillones en una terraza de piedra" decoding="async"></figure>
+      <figure class="slide" data-caption="Manuela Cream" aria-hidden="true"><img src="https://alinarols.github.io/rols-home-2026/img/rep-b352f05240d9.webp" alt="Alfombra Manuela Cream redonda en un comedor de tonos naturales" decoding="async"></figure>
+    </div>
+    <div class="gallery-controls" hidden>
+      <p class="gallery-caption">Strata</p>
+      <div class="gallery-actions" aria-label="Elegir imagen">
+        <button class="gallery-dot" type="button" aria-label="Ver Strata" aria-current="true"></button>
+        <button class="gallery-dot" type="button" aria-label="Ver Kilt 04" aria-current="false"></button>
+        <button class="gallery-dot" type="button" aria-label="Ver Manuela Cream" aria-current="false"></button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap fcols">
+    <div class="fbrand">
+      <svg viewBox="0 29.8 128.06 68.5" aria-hidden="true"><path fill="currentColor" d="M80.9 97.7V29.8h3.3v65.1h17.1v2.8H80.9m-15-13.6c.5-2.3.5-4.7 0-7-.2-.7-.4-1.4-.6-2-.8-1.9-2-3.5-3.4-4.9-1.3-1.3-2.9-2.3-4.6-3-.5-.2-1.1-.4-1.7-.6-.8-.2-1.5-.4-2.3-.4-.5-.1-1.1 0-1.6-.1H51c-1.3 0-2.6.2-3.9.5-4.5 1.2-8.5 4.6-10 9.1 0 .1-.1.3-.1.4-.2.8-.4 1.6-.6 2.5 0 .6-.2 1.2-.1 1.8 0 .8.1 1.6.2 2.3.1.7.2 1.4.4 2 0 .1.1.2.1.3 1.4 4.4 5.2 7.9 9.6 9.3.7.2 1.3.4 2 .5.7.1 1.3.1 2 .2.6.1 1.2.1 1.8 0 .4-.1.8 0 1.1-.1.9-.1 1.8-.3 2.7-.6 4.6-1.3 8.6-5.3 9.7-10.2m3.6-7.4c.5 2.5.5 5.2 0 7.7-.2.8-.4 1.5-.7 2.2-1.2 3.2-3.5 5.9-6.2 7.9-1.7 1.3-3.7 2.3-5.8 2.9-.6.2-1.3.3-1.9.4-.5.1-1.1.1-1.6.2-.7 0-1.4 0-2.1.1-.7-.1-1.4-.1-2.1-.1-.3-.1-.7 0-1-.1-1-.1-2-.4-3-.7-4-1.2-7.4-3.9-9.7-7.3-.9-1.4-1.6-2.9-2.1-4.5 0-.1-.1-.2-.1-.3-.2-.7-.4-1.5-.4-2.2-.1-.4-.1-.7-.1-1.1-.1-.2-.1-.4-.1-.7 0-1.8.1-3.6.6-5.3v-.2c.1-.5.3-.9.5-1.4 1-2.6 2.8-4.9 4.9-6.8 2.2-1.9 4.9-3.3 7.8-4 1.1-.3 2.2-.4 3.3-.5h2.9c.1 0 .3 0 .4.1 1.1 0 2.2.3 3.2.5.6.2 1.1.3 1.6.5 2.1.7 4 1.9 5.7 3.3 2.2 1.9 4.1 4.3 5.1 7l.6 1.8c.2.3.3.5.3.6m45-13.1c-2.6.9-4.8 2.9-5.9 5.4-.2.5-.3.9-.4 1.4 0 .2-.1.4-.1.7-.2 1.5-.1 3.1.5 4.6.9 2 2.6 3.5 4.6 4.3.4.2.9.4 1.3.6.6.2 1.1.4 1.7.7 2.2.9 4.6 1.7 6.5 3.3.8.8 1.4 1.8 1.7 2.9.2.9.2 1.8 0 2.7-.2.5-.3 1.1-.6 1.6-.9 1.6-2.5 2.7-4.3 3.2-.8.2-1.6.3-2.4.2-.3-.1-.6-.1-.9-.1-.6-.1-1.3-.3-1.9-.5-2-.8-3.9-2-5.7-3.2v3.9c1 .6 2 1.2 3 1.7.5.2 1 .4 1.6.6.1 0 .3.1.4.1l1.2.3c.2 0 .4.1.5.1.3.1.5.1.8.1.5 0 1 0 1.6.1.7-.1 1.4-.1 2.1-.2.7-.1 1.4-.3 2-.6 2.5-1 4.6-2.9 5.6-5.4.7-1.7.8-3.6.5-5.4-.1-.6-.3-1.1-.5-1.7-.4-1.1-1.1-2.1-2-2.9-1.5-1.4-3.4-2.1-5.2-2.8-.5-.2-1-.4-1.4-.6-1.7-.6-3.5-1.2-5-2.3-1-.7-1.8-1.8-2.1-3 0-.2 0-.3-.1-.5v-1.7c.2-.9.5-1.9 1.1-2.6.7-.9 1.7-1.6 2.8-2.1 1-.4 2-.5 3.1-.5.4.1.7 0 1.1.1 1.2.2 2.4.6 3.5 1.1 1.1.5 2.2 1.1 3.3 1.7v-3.7c-1.4-.7-2.8-1.3-4.3-1.7-.7-.2-1.4-.3-2.1-.4-.9-.2-1.9-.1-2.8-.1-.9.1-1.9.3-2.8.6M17.2 74.4c.5-1.8.3-3.9-.8-5.4-.9-1.2-2.4-1.9-3.8-2.3h-.2c-.8-.2-1.5-.3-2.3-.3H3.6v12.5H10c.4-.1.8 0 1.2-.1 1.3-.1 2.5-.5 3.6-1.1 1-.9 2-2 2.4-3.3m3.6-.1c0 .1-.1.3-.1.4 0 .1-.1.3-.1.4-.6 1.9-2 3.5-3.7 4.5-.6.4-1.3.7-2 1 1.5 1.2 2.7 2.9 3.8 4.5l8.4 12.6h-4c-1.1-1.8-2.4-3.6-3.5-5.4-1.9-2.8-3.5-5.7-5.7-8.2-.5-.5-1-1.1-1.7-1.5-.8-.5-1.8-.7-2.7-.9-.2 0-.5 0-.7-.1-1.8-.1-3.6 0-5.4 0v16.1H0V63.4h9.5c1 .1 1.9.1 2.9.3.7.1 1.4.3 2 .4 1.9.6 3.8 1.6 5 3.3.5.7.9 1.5 1.2 2.3.4 1.4.5 3.1.2 4.6"></path></svg>
+      <a class="fcontact" href="https://www.rolscarpets.com/contacto/">Contacta con nosotros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg></a>
+      <ul class="fcontact-list">
+        <li><a href="mailto:info@rolscarpets.com">info@rolscarpets.com</a></li>
+        <li><a href="tel:+34965400979">+34 965 40 09 79</a></li>
+      </ul>
+      <ul class="fsocial">
+        <li><a href="https://www.instagram.com/rolscarpets/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></rect><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></circle><circle cx="17.2" cy="6.8" r="0.9" fill="currentColor"></circle></svg></a></li>
+        <li><a href="https://www.pinterest.es/rolscarpets" target="_blank" rel="noreferrer" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></circle><path d="M10.2 17.6 12.1 8.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9.4 11.9c0-2 1.6-3.5 3.6-3.5 1.8 0 3 1.1 3 2.8 0 2-1.3 3.6-3 3.6-.8 0-1.5-.4-1.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
+        <li><a href="https://www.linkedin.com/company/rols-carpets/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></rect><circle cx="7.6" cy="7.8" r="0.95" fill="currentColor"></circle><path d="M7.6 10.8v6.4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.6 17.2v-6.4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11.6 13.4c0-1.6 1-2.6 2.4-2.6s2.4 1 2.4 2.6v3.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Alfombras a medida</h4>
+      <ul>
+        <li><a href="https://www.rolscarpets.com/productos/alfombras-a-medida/">Ver todas las alfombras</a></li>
+        <li><a href="https://www.rolscarpets.com/colecciones/">Colecciones</a></li>
+        <li><a href="https://www.rolscarpets.com/moquetas/">Moquetas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Profesionales</h4>
+      <ul>
+        <li><a href="https://pro.rolscarpets.com/?ulang=1" target="_blank" rel="noreferrer">Rols Pro</a></li>
+        <li><a href="https://www.rolscarpets.com/proyectos-realizados/">Proyectos</a></li>
+        <li><a href="https://www.rolscarpets.com/donde-encontrarnos/">Dónde comprar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Recursos</h4>
+      <ul>
+        <li><a href="https://www.rolscarpets.com/recursos3d/">Recursos 3D</a></li>
+        <li><a href="https://www.rolscarpets.com/catalogos/">Catálogos</a></li>
+        <li><a href="https://www.rolscarpets.com/guia-de-medidas/">Guía de medidas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap flegal">
+    <span>© 2026 Moquetas Rols, S.A.</span>
+    <ul>
+      <li><a href="https://www.rolscarpets.com/aviso-legal/">Aviso legal</a></li>
+      <li><a href="https://www.rolscarpets.com/politica-de-cookies/">Política de cookies</a></li>
+      <li><a href="https://www.rolscarpets.com/politica-de-privacidad/">Política de privacidad</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+    var scrim = document.getElementById('scrim');
+    function setOpen(open) {
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      drawer.classList.toggle('open', open);
+      scrim.classList.toggle('open', open);
+      scrim.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+    if (burger) {
+      burger.addEventListener('click', function () { setOpen(burger.getAttribute('aria-expanded') !== 'true'); });
+      scrim.addEventListener('click', function () { setOpen(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+      drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+    }
+  })();
+</script>
+<script>
+(function () {
+  const gallery = document.getElementById('error-gallery');
+  const slides = Array.from(gallery.querySelectorAll('.slide'));
+  const dots = Array.from(gallery.querySelectorAll('.gallery-dot'));
+  const caption = gallery.querySelector('.gallery-caption');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let current = 0, timer;
+  function show(index) {
+    const img = slides[index].querySelector('img');
+    if (!img.complete || !img.naturalWidth) return;
+    current = index;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index);
+      slide.setAttribute('aria-hidden', String(i !== index));
+      dots[i].setAttribute('aria-current', String(i === index));
+    });
+    caption.textContent = slides[index].dataset.caption;
+  }
+  function schedule() {
+    clearInterval(timer);
+    if (reduced.matches || document.hidden) return;
+    timer = setInterval(() => {
+      for (let step = 1; step < slides.length; step++) {
+        const index = (current + step) % slides.length;
+        const img = slides[index].querySelector('img');
+        if (img.complete && img.naturalWidth) { show(index); break; }
+      }
+    }, 5000);
+  }
+  dots.forEach((dot, index) => dot.addEventListener('click', () => { show(index); schedule(); }));
+  document.addEventListener('visibilitychange', schedule);
+  reduced.addEventListener('change', schedule);
+  gallery.querySelector('.gallery-controls').hidden = false;
+  schedule();
+})();
+</script>
+</body>
+</html>
